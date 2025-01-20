@@ -1,7 +1,39 @@
-<style>.blikej { animation: blik 4s infinite; -webkit-animation: blik 4s infinite } @keyframes blik { 0% { opacity:1 } 50% { opacity:0 } 100% { opacity:1 } } @-webkit-keyframes blik { 0% { opacity:1 } 50% { opacity:0 } 100% { opacity:1 } } </style>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blikající pozadí</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            animation: blinkBackground 1s infinite alternate;
+        }
 
-<div class=“blikej“>Blikám!</div>
+        @keyframes blinkBackground {
+            0% {
+                background-color: #ff0000; /* červená */
+            }
+            50% {
+                background-color: #00ff00; /* zelená */
+            }
+            100% {
+                background-color: #0000ff; /* modrá */
+            }
+        }
 
-
-
-<span style='color:white'><a href='http://htmlkody.info'>htmlkody.info</a></span>
+        h1 {
+            color: white;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blikající pozadí!</h1>
+</body>
+</html>
