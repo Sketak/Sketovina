@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    animation: blinkBackground 1s infinite alternate;
+}
+
+@keyframes blinkBackground {
+    0% {
+        background-color: #ff0000; /* červená */
+    }
+    50% {
+        background-color: #00ff00; /* zelená */
+    }
+    100% {
+        background-color: #0000ff; /* modrá */
+    }
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
