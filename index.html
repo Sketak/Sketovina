@@ -1,13 +1,100 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <body>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bliky</title>
-    </head>
-<link rel="stylesheet" href="styles.css">
-</html>
-    <h1>bliky</h1>
+    <title>Nejlepší hráči Real Madridu</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            font-size: 2em;
+        }
+
+        .player-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .player {
+            background-color: #333;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .player:hover {
+            transform: scale(1.05);
+        }
+
+        .player img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .player h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .player p {
+            font-size: 1em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nejlepší hráči Real Madridu</h1>
+        <p>Hráči, kteří udělali historii</p>
+    </header>
+
+    <div class="player-list">
+        <div class="player">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Cristiano_Ronaldo_2018.jpg/220px-Cristiano_Ronaldo_2018.jpg" alt="Cristiano Ronaldo">
+            <h3>Cristiano Ronaldo</h3>
+            <p>Jeden z největších hráčů v historii fotbalu, jehož góly a výkony zajišťovaly Realu úspěch po mnoho let.</p>
+        </div>
+
+        <div class="player">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Raúl_González_2012.jpg/220px-Raúl_González_2012.jpg" alt="Raul González">
+            <h3>Raúl González</h3>
+            <p>Legenda, která byla symbolem klubu pro mnoho let. Byl lídrem na hřišti a v srdci fanoušků Realu.</p>
+        </div>
+
+        <div class="player">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Ferenc_Pusk%C3%A1s_-_1970.jpg/220px-Ferenc_Pusk%C3%A1s_-_1970.jpg" alt="Ferenc Puskás">
+            <h3>Ferenc Puskás</h3>
+            <p>Maďarský génius, který se stal legendou Real Madridu díky své neuvěřitelné schopnosti dávat góly.</p>
+        </div>
+
+        <div class="player">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Alfredo_Di_Stéfano_1960.jpg/220px-Alfredo_Di_Stéfano_1960.jpg" alt="Alfredo Di Stéfano">
+            <h3>Alfredo Di Stéfano</h3>
+            <p>Argentinský kouzelník, který transformoval Real Madrid do jednoho z nejslavnějších klubů na světě.</p>
+        </div>
+
+        <div class="player">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Zinedine_Zidane_2014.jpg/220px-Zinedine_Zidane_2014.jpg" alt="Zinedine Zidane">
+            <h3>Zinedine Zidane</h3>
+            <p>Francouzský šampion, který přivedl Real k vítězství v Lize mistrů a stal se ikonou klubu.</p>
+        </div>
+    </div>
+
 </body>
 </html>
