@@ -21,27 +21,31 @@
             display: flex;
             justify-content: center;
             margin: 20px;
-            flex-wrap: wrap; /* Přidáno pro lepší responzivitu */
+            flex-wrap: wrap; /* Umožní přizpůsobení na mobilních zařízeních */
         }
         .player {
             margin: 0 15px;
             text-align: center;
-            flex: 1 1 200px; /* Zajišťuje, že každý prvek se přizpůsobí */
+            display: flex;
+            flex-direction: column; /* Obrázky budou nad textem */
+            align-items: center;
+            max-width: 220px;
         }
         .player img {
-            width: 100%;
+            width: 200px; /* Zajišťuje, že obrázky budou vždy stejné velikosti */
             height: auto;
-            max-width: 200px; /* Obrázky nebudou větší než 200px */
             border-radius: 10px;
+            margin-bottom: 10px; /* Vzdálenost mezi obrázkem a jménem */
         }
         .player h3 {
             color: #0033a0;
-            margin-top: 10px;
+            margin: 0;
         }
 
-        @media (max-width: 768px) { /* Přidání mediálního dotazu pro mobilní zařízení */
+        @media (max-width: 768px) { /* Zajistí přizpůsobení na mobilních zařízeních */
             .player-list {
                 flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -54,20 +58,21 @@
 
 <div class="player-list">
     <div class="player">
-        <img src="https://example.com/player1.jpg" alt="Hráč 1">
+        <img src="https://example.com/player1.jpg" alt="Kylian Mbappé">
         <h3>Kylian Mbappé</h3>
     </div>
     <div class="player">
-        <img src="https://example.com/player2.jpg" alt="Hráč 2">
+        <img src="https://example.com/player2.jpg" alt="Vinícius Júnior">
         <h3>Vinícius Júnior</h3>
     </div>
     <div class="player">
-        <img src="https://example.com/player3.jpg" alt="Hráč 3">
+        <img src="https://example.com/player3.jpg" alt="Karim Benzema">
         <h3>Karim Benzema</h3>
     </div>
 </div>
 
 </body>
 </html>
+
 
 
