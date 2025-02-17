@@ -21,32 +21,59 @@
             display: flex;
             justify-content: center;
             margin: 20px;
-            flex-wrap: wrap; /* Umožní přizpůsobení na mobilních zařízeních */
+            flex-wrap: wrap;
         }
         .player {
             margin: 0 15px;
             text-align: center;
             display: flex;
-            flex-direction: column; /* Obrázky budou nad textem */
+            flex-direction: column;
             align-items: center;
             max-width: 220px;
+            cursor: pointer; /* Změní kurzor na ukazatel */
         }
         .player img {
-            width: 200px; /* Zajišťuje, že obrázky budou vždy stejné velikosti */
+            width: 200px;
             height: auto;
             border-radius: 10px;
-            margin-bottom: 10px; /* Vzdálenost mezi obrázkem a jménem */
+            margin-bottom: 10px;
         }
         .player h3 {
             color: #0033a0;
             margin: 0;
         }
 
-        @media (max-width: 768px) { /* Zajistí přizpůsobení na mobilních zařízeních */
-            .player-list {
-                flex-direction: column;
-                align-items: center;
-            }
+        /* Styl pro modální okno */
+        .modal {
+            display: none; /* Skryté modální okno */
+            position: fixed;
+            z-index: 1; /* Na vrchu */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Poloprůhledné pozadí */
+            overflow: auto;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -57,19 +84,68 @@
 </header>
 
 <div class="player-list">
-    <div class="player">
+    <div class="player" onclick="openModal('player1')">
         <img src="https://example.com/player1.jpg" alt="Kylian Mbappé">
         <h3>Kylian Mbappé</h3>
     </div>
-    <div class="player">
+    <div class="player" onclick="openModal('player2')">
         <img src="https://example.com/player2.jpg" alt="Vinícius Júnior">
         <h3>Vinícius Júnior</h3>
     </div>
-    <div class="player">
+    <div class="player" onclick="openModal('player3')">
         <img src="https://example.com/player3.jpg" alt="Karim Benzema">
         <h3>Karim Benzema</h3>
     </div>
 </div>
+
+<!-- Modální okno pro Kylian Mbappé -->
+<div id="player1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('player1')">&times;</span>
+        <h2>Kylian Mbappé</h2>
+        <p>Kylian Mbappé je francouzský fotbalista, který hraje za Real Madrid jako útočník. Je považován za jednoho z nejlepších hráčů na světě.</p>
+    </div>
+</div>
+
+<!-- Modální okno pro Vinícius Júnior -->
+<div id="player2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('player2')">&times;</span>
+        <h2>Vinícius Júnior</h2>
+        <p>Vinícius Júnior je brazilský fotbalista, který je známý svou rychlostí a technickými dovednostmi. Hraje za Real Madrid na pozici křídla.</p>
+    </div>
+</div>
+
+<!-- Modální okno pro Karim Benzema -->
+<div id="player3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('player3')">&times;</span>
+        <h2>Karim Benzema</h2>
+        <p>Karim Benzema je francouzský útočník, který je dlouholetým členem Real Madrid. Je známý svou schopností dávat góly a tvořit asistence.</p>
+    </div>
+</div>
+
+<script>
+    // Otevře modální okno
+    function openModal(playerId) {
+        document.getElementById(playerId).style.display = "block";
+    }
+
+    // Zavře modální okno
+    function closeModal(playerId) {
+        document.getElementById(playerId).style.display = "none";
+    }
+
+    // Zavření modálního okna, když kliknete mimo něj
+    window.onclick = function(event) {
+        var modals = document.getElementsByClassName('modal');
+        for (var i = 0; i < modals.length; i++) {
+            if (event.target == modals[i]) {
+                modals[i].style.display = "none";
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
