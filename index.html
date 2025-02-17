@@ -21,19 +21,28 @@
             display: flex;
             justify-content: center;
             margin: 20px;
+            flex-wrap: wrap; /* Přidáno pro lepší responzivitu */
         }
         .player {
             margin: 0 15px;
             text-align: center;
+            flex: 1 1 200px; /* Zajišťuje, že každý prvek se přizpůsobí */
         }
         .player img {
-            width: 200px;
+            width: 100%;
             height: auto;
+            max-width: 200px; /* Obrázky nebudou větší než 200px */
             border-radius: 10px;
         }
         .player h3 {
             color: #0033a0;
             margin-top: 10px;
+        }
+
+        @media (max-width: 768px) { /* Přidání mediálního dotazu pro mobilní zařízení */
+            .player-list {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
