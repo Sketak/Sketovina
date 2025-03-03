@@ -33,7 +33,7 @@
             cursor: pointer; /* Změní kurzor na ukazatel */
         }
         .player img {
-            width: 200px;
+            width: 300px; /* Zvětšeno na 300px */
             height: auto;
             border-radius: 10px;
             margin-bottom: 10px;
@@ -110,45 +110,5 @@
 <!-- Modální okno pro Cristiano Ronaldo -->
 <div id="player2" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal('player2')">&times;</span>
-        <h2>Cristiano Ronaldo</h2>
-        <p>Cristiano Ronaldo je portugalský fotbalista, který hrál za Real Madrid v letech 2009 až 2018. Byl jedním z nejlepších fotbalistů na světě, známý svou schopností dávat góly a vítězstvími v Lize mistrů.</p>
-    </div>
-</div>
-
-<!-- Modální okno pro Ronaldo Nazário -->
-<div id="player3" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('player3')">&times;</span>
-        <h2>Ronaldo Nazário</h2>
-        <p>Ronaldo Nazário, známý jako "Il Fenomeno", byl brazilský útočník, který hrál za Real Madrid v letech 2002 až 2007. Je považován za jednoho z nejlepších útočníků všech dob, známý svou rychlostí a technikou.</p>
-    </div>
-</div>
-
-<script>
-    // Otevře modální okno
-    function openModal(playerId) {
-        document.getElementById(playerId).style.display = "block";
-    }
-
-    // Zavře modální okno
-    function closeModal(playerId) {
-        document.getElementById(playerId).style.display = "none";
-    }
-
-    // Zavření modálního okna, když kliknete mimo něj
-    window.onclick = function(event) {
-        var modals = document.getElementsByClassName('modal');
-        for (var i = 0; i < modals.length; i++) {
-            if (event.target == modals[i]) {
-                modals[i].style.display = "none";
-            }
-        }
-    }
-</script>
-
-</body>
-</html>
-
-
+        <span class="close"
 
