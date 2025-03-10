@@ -3,99 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nejlepší hráči Real Madrid</title>
+    <title>Nejlepší hráči Real Madridu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #0033a0;
-            color: white;
-            padding: 20px;
             text-align: center;
+            padding: 50px;
         }
-        .player-list {
+        .container {
             display: flex;
             justify-content: center;
-            margin: 20px;
-            flex-wrap: wrap;
+            gap: 20px;
         }
         .player {
-            margin: 0 30px; /* Zvětšeno na 30px pro větší vzdálenost */
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 220px;
-            cursor: pointer; /* Změní kurzor na ukazatel */
-        
-        .player h3 {
-            color: #0033a0;
-            margin: 0;
+            width: 200px;
         }
-
-        /* Styl pro modální okno */
-        .modal {
-            display: none; /* Skryté modální okno */
-            position: fixed;
-            z-index: 1; /* Na vrchu */
-            left: 0;
-            top: 0;
+        .player img {
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Poloprůhledné pozadí */
-            overflow: auto;
-        }
-        .modal-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 20px;
+            height: auto;
             border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
             cursor: pointer;
+        }
+        h1 {
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Nejlepší hráči Real Madrid</h1>
-</header>
-
-<div class="player-list">
-    <div class="player" onclick="openModal('player1')">
-        <img src="https://d153a5wkap3yqn.cloudfront.net/cms/3822/5868-main.jpg" alt="Zinedine Zidane">
-        <h3>Zinedine Zidane</h3>
+    <h1>Nejlepší hráči Real Madridu</h1>
+    <div class="container">
+        <div class="player">
+            <a href="https://cs.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank">
+                <img src="https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2024-11/Cristiano%20Ronaldo%2011162024.jpg" alt="Cristiano Ronaldo">
+            </a>
+            <p>Cristiano Ronaldo</p>
+        </div>
+        <div class="player">
+            <a href="https://cs.wikipedia.org/wiki/Ronaldo_(fotbalista)" target="_blank">
+                <img src="https://tmssl.akamaized.net/images/foto/galerie/ronaldo-luis-nazario-de-lima-1475754592-6247.jpg" alt="Ronaldo Nazario">
+            </a>
+            <p>Ronaldo Nazario</p>
+        </div>
+        <div class="player">
+            <a href="https://cs.wikipedia.org/wiki/Zin%C3%A9dine_Zidane" target="_blank">
+                <img src="https://tmssl.akamaized.net/images/foto/galerie/zidane-zinedine-2002-2003-real-madrid-0017010026hjpg-1684150213-107080.jpg" alt="Zinedine Zidane">
+            </a>
+            <p>Zinedine Zidane</p>
+        </div>
     </div>
-    <div class="player" onclick="openModal('player2')">
-        <img src="https://oberlinreview.org/wp-content/uploads/2022/03/Christiano-Ronaldo_-Courtesy-of-Jan-Kruger-from-Getty-Images.jpg" alt="Cristiano Ronaldo">
-        <h3>Cristiano Ronaldo</h3>
-    </div>
-    <div class="player" onclick="openModal('player3')">
-        <img src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/65bfb48bc7af84001c8512f1.jpg" alt="Ronaldo Nazário">
-        <h3>Ronaldo Nazário</h3>
-    </div>
-</div>
-
-<!-- Modální okno pro Zinedine Zidane -->
-<div id="player1" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('player1')">&times;</span>
-        <h2>Zinedine Zidane</h2>
-        <p>Zinedine Zidane je francouzský fotbalista a trenér, který se stal legendou Real Madrid. V klubu hrál jako ofenzivní záložník a přispěl k mnoha úspěchům, včetně vítězství v Lize mistrů.</p>
-    </div>
+</body>
+</html>
